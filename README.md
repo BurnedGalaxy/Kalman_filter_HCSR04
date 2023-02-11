@@ -1,2 +1,3 @@
-# Kalman_filter_HCSR04
-Project Documentation for Object Tracking using Kalman filter.
+# KalmanfilterHCSR04
+
+This is the project documentation for Object Tracking using Kalman filter.
