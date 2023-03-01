@@ -1,11 +1,18 @@
 import serial
 
-arduino = serial.Serial("/dev/ttyACM0", 115)
+port = "/dev/ttyACM0"
+filename = "sensor.dat"
+samples = 20
 
-rawdata = []
-count=0
+arduino = serial.Serial(port, 115200)
 
-while count < 3:
-    rawdata.append(str(arduino.readline()))
-    count+=1
-print(rawdata)
+file = open(filename, 'a')
+count = 0
+
+while count < samples:
+    buffer = str(arduino.readline(), 'utf-8')
+    if count:
+        file.write(buffer)
+    count = count + 1
+
+file.close()
