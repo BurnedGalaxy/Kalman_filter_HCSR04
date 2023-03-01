@@ -2,7 +2,7 @@ import serial
 
 port = "/dev/ttyACM0"
 filename = "sensor.dat"
-samples = 20
+samples = 60
 
 arduino = serial.Serial(port, 115200)
 
